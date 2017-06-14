@@ -179,7 +179,7 @@ a new effect that triggers when you shrink the screen below 800px wide.
 
 All of the rules that you've learn so far are based on one paradigm of
 positioning, called 'static' positioning. However, it's possible to change this
-paradigm and employ a different approach for positining elements using the
+paradigm and employ a different approach for positioning elements using the
 `position` attribute.
 
 Though there are others, the most significant type of positioning besides
