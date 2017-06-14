@@ -2,16 +2,14 @@
 
 # HTML & CSS Layout
 
-## Preparation
+## Prerequisites
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
-1.  Create three new branches, `training`, `float-site`, and `lookalike-site`.
-1.  Install dependencies with `npm install`.
+-    Basic knowledge of HTML
+-    Basic knowledge of CSS
 
 ## Objectives
 
-Developers should, at the end of the lesson, be able to:
+By the end of this talk, developers should be able to:
 
 -   Explain the box model of element spacing.
 -   Establish spacing inside and outside of elements using margin and padding.
@@ -20,6 +18,14 @@ page, including 'px', '%', and 'em'.
 -   Use 'float' and 'clear' to stack elements alongside each other.
 -   Employ media queries to change CSS rules based on screen size.
 -   Explain the difference between 'static' and 'fixed' positioning.
+
+## Preparation
+
+1.  Fork and clone this repository.
+    [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  Create three new branches, `training`, `float-site`, and `lookalike-site`.
+1.  Install dependencies with `npm install`.
+
 
 ## Historic CSS Layout
 
@@ -173,7 +179,7 @@ a new effect that triggers when you shrink the screen below 800px wide.
 
 All of the rules that you've learn so far are based on one paradigm of
 positioning, called 'static' positioning. However, it's possible to change this
-paradigm and employ a different approach for positining elements using the
+paradigm and employ a different approach for positioning elements using the
 `position` attribute.
 
 Though there are others, the most significant type of positioning besides
