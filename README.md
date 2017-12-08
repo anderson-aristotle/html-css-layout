@@ -22,7 +22,7 @@ page, including 'px', '%', and 'em'.
 ## Preparation
 
 1.  Fork and clone this repository.
-    [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+    [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
 1.  Create three new branches, `training`, `float-site`, and `lookalike-site`.
 1.  Install dependencies with `npm install`.
 
@@ -48,6 +48,9 @@ content was typically not a table.
 Using CSS to control our layout addressed all of these issues. What's more, it
 effectively abstracted away the _layout_ of our page from the _content_ of our
 page.
+
+## 90's CSS Example:
+-   [#TBT](https://www.warnerbros.com/archive/spacejam/movie/jam.html)
 
 ## Box Model
 
@@ -194,6 +197,9 @@ scrolling, or for holding a navigation bar at the top/side/bottom of the screen.
   left: 130px;
 }
 ```
+
+## Additional Resource:
+-   [CSS Positioning Explained By Building An Ice Cream Sundae](https://medium.freecodecamp.org/css-positioning-explained-by-building-an-ice-cream-sundae-831cb884bfa9)
 
 ### Lab: Static vs Fixed Positioning
 
