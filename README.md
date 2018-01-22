@@ -38,19 +38,16 @@ rows (`<tr>`) and row subdivisions (`<td>`). However, this was problematic for
 several reasons:
 
 1.  Layout was hard-coded into the page - it couldn't easily be adjusted.
-2.  As a result of (1), keeping layout consistent between multiple pages was
-tedious.
-3.  Nesting tables within tables quickly became a nightmare - how could you tell
+2.  Nesting tables within tables quickly became a nightmare - how could you tell
 apart the `<tr>` of one level from the `<td>` of another?
-4.  It wasn't very semantic - our markup would always say 'table', even though our
+3.  It wasn't very semantic - our markup would always say 'table', even though our
 content was typically not a table.
 
 Using CSS to control our layout addressed all of these issues. What's more, it
 effectively abstracted away the _layout_ of our page from the _content_ of our
 page.
 
-## 90's CSS Example:
--   [#TBT](https://www.warnerbros.com/archive/spacejam/movie/jam.html)
+[# 90's CSS Example](https://www.warnerbros.com/archive/spacejam/movie/jam.html)
 
 ## Box Model
 
