@@ -33,10 +33,10 @@ module.exports = {
       rules: [
         {
           test: /\.js$/,
-          exclude: /(node_modules|bower_components)/,
+          exclude: /node_modules/,
           loader: 'babel-loader',
           query: {
-            presets: ['es2015']
+            presets: ['env']
           }
         },
         {
@@ -66,7 +66,7 @@ module.exports = {
           loader: 'url-loader?limit=10000&mimetype=application/font-woff'
         },
         {
-          test: /\.(ttf|eot|svg|png|jpg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          test: /\.(ttf|eot|svg|png|jpg|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
           loader: 'file-loader'
         },
         {
