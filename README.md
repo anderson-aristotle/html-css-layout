@@ -38,19 +38,16 @@ rows (`<tr>`) and row subdivisions (`<td>`). However, this was problematic for
 several reasons:
 
 1.  Layout was hard-coded into the page - it couldn't easily be adjusted.
-2.  As a result of (1), keeping layout consistent between multiple pages was
-tedious.
-3.  Nesting tables within tables quickly became a nightmare - how could you tell
+2.  Nesting tables within tables quickly became a nightmare - how could you tell
 apart the `<tr>` of one level from the `<td>` of another?
-4.  It wasn't very semantic - our markup would always say 'table', even though our
+3.  It wasn't very semantic - our markup would always say 'table', even though our
 content was typically not a table.
 
 Using CSS to control our layout addressed all of these issues. What's more, it
 effectively abstracted away the _layout_ of our page from the _content_ of our
 page.
 
-## 90's CSS Example:
--   [#TBT](https://www.warnerbros.com/archive/spacejam/movie/jam.html)
+[# 90's CSS Example](https://www.warnerbros.com/archive/spacejam/movie/jam.html)
 
 ## Box Model
 
@@ -90,15 +87,15 @@ Block elements, as a rule, always stack vertically - never side by side. Each
 block element effectively has a 'new-line' built into it, forcing the next piece
 of content down.
 
-![Floated Block Elements](assets/images/floated-block-elements-01.png)
+![Floated Block Elements](public/images/floated-block-elements-01.png)
 
 This can be circumvented using the `float` property; floated elements act like
 words within a block of text, wrapping around the screen when it is too narrow
 to display the entire line.
 
-![Floated Block Elements](assets/images/floated-block-elements-02.png)
+![Floated Block Elements](public/images/floated-block-elements-02.png)
 
-![Floated Block Elements](assets/images/floated-block-elements-03.png)
+![Floated Block Elements](public/images/floated-block-elements-03.png)
 
 Like words, floated elements can be stacked from left-to-right (_left-floated_)
 or from right-to-left (_right-floated_)
@@ -113,7 +110,7 @@ of float.
 Working on our `training` branch, let's use the example HTML code to
 demonstrate floating.
 
-![Clearing a Float](assets/images/floated-block-elements-04.png)
+![Clearing a Float](public/images/floated-block-elements-04.png)
 
 > Ordinarily, elements expand to hold their containers. However, floated
 > elements are excluded from this, so floating an element may lead to its
@@ -181,9 +178,10 @@ a new effect that triggers when you shrink the screen below 800px wide.
 ## Static vs Fixed Positioning
 
 All of the rules that you've learn so far are based on one paradigm of
-positioning, called 'static' positioning. However, it's possible to change this
-paradigm and employ a different approach for positioning elements using the
-`position` attribute.
+positioning, called 'static' positioning. Static positioning is the default positioning model for elements. They are displayed in the page where they rendered as part of normal HTML flow.
+
+![Alt Text](http://blog.froont.com/content/images/2015/01/02-Static-position-FROONT.gif)
+
 
 Though there are others, the most significant type of positioning besides
 `static` positioning is `fixed` positioning. `fixed` positioning defines the
@@ -191,12 +189,7 @@ position of an element with respect to the _view window_, essentially 'fixing'
 its position on the screen. Fixed positioning is frequently used in parallax
 scrolling, or for holding a navigation bar at the top/side/bottom of the screen.
 
-```css
-.bar {
-  position: fixed;
-  left: 130px;
-}
-```
+![Alt Text](http://blog.froont.com/content/images/2015/01/05-fixed-position-FROONT.gif)
 
 ## Additional Resource:
 -   [CSS Positioning Explained By Building An Ice Cream Sundae](https://medium.freecodecamp.org/css-positioning-explained-by-building-an-ice-cream-sundae-831cb884bfa9)
