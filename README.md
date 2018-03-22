@@ -178,9 +178,10 @@ a new effect that triggers when you shrink the screen below 800px wide.
 ## Static vs Fixed Positioning
 
 All of the rules that you've learn so far are based on one paradigm of
-positioning, called 'static' positioning. However, it's possible to change this
-paradigm and employ a different approach for positioning elements using the
-`position` attribute.
+positioning, called 'static' positioning. Static positioning is the default positioning model for elements. They are displayed in the page where they rendered as part of normal HTML flow.
+
+![Alt Text](http://blog.froont.com/content/images/2015/01/02-Static-position-FROONT.gif)
+
 
 Though there are others, the most significant type of positioning besides
 `static` positioning is `fixed` positioning. `fixed` positioning defines the
@@ -188,12 +189,7 @@ position of an element with respect to the _view window_, essentially 'fixing'
 its position on the screen. Fixed positioning is frequently used in parallax
 scrolling, or for holding a navigation bar at the top/side/bottom of the screen.
 
-```css
-.bar {
-  position: fixed;
-  left: 130px;
-}
-```
+![Alt Text](http://blog.froont.com/content/images/2015/01/05-fixed-position-FROONT.gif)
 
 ## Additional Resource:
 -   [CSS Positioning Explained By Building An Ice Cream Sundae](https://medium.freecodecamp.org/css-positioning-explained-by-building-an-ice-cream-sundae-831cb884bfa9)
