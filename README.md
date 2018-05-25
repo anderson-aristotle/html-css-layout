@@ -118,7 +118,7 @@ right?
 We've definitely got some work to do. Here's what we want our site to look
 like:
 
-![image](https://git.generalassemb.ly/storage/user/6926/files/f0d5ce70-6019-11e8-8959-004cc093b5a5)
+![image](https://git.generalassemb.ly/storage/user/6926/files/1ab5a122-6036-11e8-9e76-e77cbc3baf83)
 
 To get there, we'll need to use floats and clears, and we'll also need something
 known as the "clearfix hack".
@@ -204,9 +204,6 @@ scrolling, or for holding a navigation bar at the top/side/bottom of the screen.
 
 ![Fixed](public/images/fixed.gif)
 
-## Additional Resource:
--   [CSS Positioning Explained By Building An Ice Cream Sundae](https://medium.freecodecamp.org/css-positioning-explained-by-building-an-ice-cream-sundae-831cb884bfa9)
-
 ### Lab: Static vs Fixed Positioning
 
 Switch to the `lookalike-site` branch and work in your squads to create your own
@@ -222,6 +219,11 @@ once.
 [Research](https://developer.mozilla.org/en-US/docs/Web/CSS/position) relative
  and absolute positioning in CSS. How are they used? A helpful reference for
 understanding is [this CSS-tricks blog post](https://css-tricks.com/absolute-positioning-inside-relative-positioning/).
+
+## Additional Resources:
+- [Interactive CSS Intro](https://rupl.github.io/unfold/)
+- [Interactive Box Model Demo](http://guyroutledge.github.io/box-model/)
+- [CSS Positioning Explained By Building An Ice Cream Sundae](https://medium.freecodecamp.org/css-positioning-explained-by-building-an-ice-cream-sundae-831cb884bfa9)
 
 ## [License](LICENSE)
 
