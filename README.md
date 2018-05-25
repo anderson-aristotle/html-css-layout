@@ -112,10 +112,23 @@ demonstrate floating.
 
 ![Clearing a Float](public/images/floated-block-elements-04.png)
 
+First, we'll spin up our server, and see how things look currently. Not great,
+right?
+
+We've definitely got some work to do. Here's what we want our site to look
+like:
+
+![image](https://git.generalassemb.ly/storage/user/6926/files/f0d5ce70-6019-11e8-8959-004cc093b5a5)
+
+To get there, we'll need to use floats and clears, and we'll also need something
+known as the "clearfix hack".
+
 > Ordinarily, elements expand to hold their containers. However, floated
 > elements are excluded from this, so floating an element may lead to its
 > container's height shrinking down to nothing. To fix this, we use a "clearfix
 > hack" by applying `overflow: hidden;` to the container's style declarations.
+
+Once we've achieved the desired layout, lets commit our changes.
 
 ### Lab: Box Model, Float/Clear
 
