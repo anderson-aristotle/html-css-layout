@@ -23,9 +23,8 @@ page, including 'px', '%', and 'em'.
 
 1.  Fork and clone this repository.
     [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-1.  Create three new branches, `training`, `float-site`, and `lookalike-site`.
+1.  Create three new branches, `training`, `flex-site`, and `lookalike-site`.
 1.  Install dependencies with `npm install`.
-
 
 ## Historic CSS Layout
 
@@ -81,34 +80,53 @@ For all dimensions except `font-size`, `em` will refer to the font size of the
 element; as a value for `font-size`, `em` refers to the font size of the
 *parent*.
 
-## Float and Clear
+## Flexbox
 
 Block elements, as a rule, always stack vertically - never side by side. Each
 block element effectively has a 'new-line' built into it, forcing the next piece
 of content down.
 
-![Floated Block Elements](public/images/floated-block-elements-01.png)
+This can be circumvented using a system called Flexbox. Officially called the
+"Flexible Box Model", Flexbox is a relatively recent addition to CSS that makes
+creating rich, responsive layouts much easier. Flexbox allows us to specify
+whether the children of a given element should be arranged horizontally or
+vertically, how they should be positioned along that axis, and how much space
+they should take up.
 
-This can be circumvented using the `float` property; floated elements act like
-words within a block of text, wrapping around the screen when it is too narrow
-to display the entire line.
+A Flexbox layout therefore consists of two layers: the container element, which
+we give the CSS properties `display: flex;` and `flex-direction: <direction>;`,
+and the child elements, which will be arranged in that direction.
 
-![Floated Block Elements](public/images/floated-block-elements-02.png)
+The most common choices for that `<direction>` will either be `row` or `column`.
 
-![Floated Block Elements](public/images/floated-block-elements-03.png)
+If we choose, `flex-direction: row;` on the container element, its children will
+be layed out like this:
 
-Like words, floated elements can be stacked from left-to-right (_left-floated_)
-or from right-to-left (_right-floated_)
+![Flex Row](public/images/flex-row.png)
 
-To make something fall beneath a set of floated elements, rather then wrapping
-around it, you can use the `clear` attribute; set clear to `left` to clear a
-`left` float, `right` to clear a `right` float, or `both` to clear either kind
-of float.
+If we choose `flex-direction: column;` we'll get this instead:
+
+![Flex Column](public/images/flex-column.png)
+
+There's also a concept of a "cross axis", which is the axis perpendicular to
+the one chosen by `flex-direction`:
+
+![Flex Cross Axis](public/images/flex-row-cross-axis.png)
+
+We can use various other Flexbox properties to determine how elements are
+positioned along both axes.
+
+### Demo: Flex Properties
+
+Let's take a look at [this Codepen](https://codepen.io/cpearce31/pen/djWBpJ) to
+get a sense of the different layouts we can achieve with various flex
+properties. We'll discuss what each property does and how it achieves the layout
+that you see here.
 
 ### Code Along: Float Demonstration
 
 Working on our `training` branch, let's use the example HTML code to
-demonstrate floating.
+demonstrate Flexbox.
 
 ![Clearing a Float](public/images/floated-block-elements-04.png)
 
@@ -120,23 +138,16 @@ like:
 
 ![image](https://git.generalassemb.ly/storage/user/6926/files/1ab5a122-6036-11e8-9e76-e77cbc3baf83)
 
-To get there, we'll need to use floats and clears, and we'll also need something
-known as the "clearfix hack".
-
-> Ordinarily, elements expand to hold their containers. However, floated
-> elements are excluded from this, so floating an element may lead to its
-> container's height shrinking down to nothing. To fix this, we use a "clearfix
-> hack" by applying `overflow: hidden;` to the container's style declarations.
-
-Once we've achieved the desired layout, lets commit our changes.
+To get there, we'll need to apply some of the flex properties we just saw in the
+demo. Once we've achieved the desired layout, lets commit our changes.
 
 ### Lab: Box Model, Float/Clear
 
-Working with your squads on the `float-site` branch, use
+Working with your squads on the `flex-site` branch, use
  [index.html](index.html) to create simple look-alikes that mimic the layout
 (but **not** the actual content) of one of the following sites, using what
  you've learned about so far about CSS positioning (including margin, padding,
-float and clear).
+ and Flexbox).
 
 -   [Boston Globe](http://bostonglobe.com)
 -   [Wikipedia](http://en.wikipedia.org/wiki/Main_Page)
@@ -194,7 +205,6 @@ All of the rules that you've learn so far are based on one paradigm of
 positioning, called 'static' positioning. Static positioning is the default positioning model for elements. They are displayed in the page where they rendered as part of normal HTML flow.
 
 ![Static](public/images/static.gif)
-
 
 Though there are others, the most significant type of positioning besides
 `static` positioning is `fixed` positioning. `fixed` positioning defines the
