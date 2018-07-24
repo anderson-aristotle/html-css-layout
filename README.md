@@ -222,7 +222,7 @@ understanding is [this CSS-tricks blog post](https://css-tricks.com/absolute-pos
 ## Additional Resources:
 - [Interactive CSS Intro](https://rupl.github.io/unfold/)
 - [Interactive Box Model Demo](http://guyroutledge.github.io/box-model/)
-- [CSS Positioning Explained By Building An Ice Cream Sundae](https://medium.freecodecamp.org/css-positioning-explained-by-building-an-ice-cream-sundae-831cb884bfa9)
+- [CSS Floats](https://css-tricks.com/all-about-floats/)
 
 ## [License](LICENSE)
 
