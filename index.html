@@ -12,28 +12,34 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <nav>
-        <a class="nav-item" href="#">Home</a>
-        <a class="nav-item" href="#">About</a>
-        <a class="nav-item" href="#">Contact</a>
-      </nav>
-      <div class="box">
-        <p>Column one!</p>
-      </div>
-      <div class="box">
-        <p>Column two!</p>
-      </div>
-      <div class="box">
-        <p>Column three!</p>
-      </div>
-      <div class="box">
-        <p>I should be small, and on the left!</p>
-      </div>
-      <div class="box">
-        <p>I should be big, and on the right!</p>
-      </div>
-      <div class="full-width-box">
-        <p>I take up the whole width.</p>
+      <div class="wrapper">
+        <nav>
+          <a class="nav-item" href="#">Home</a>
+          <a class="nav-item" href="#">About</a>
+          <a class="nav-item" href="#">Contact</a>
+        </nav>
+        <div class="triple-column">
+          <div class="box content">
+            <p>Column one!</p>
+          </div>
+          <div class="box content">
+            <p>Column two!</p>
+          </div>
+          <div class="box content">
+            <p>Column three!</p>
+          </div>
+        </div>
+        <div class="double-column-offset">
+          <div class="box content">
+            <p>I'm small!</p>
+          </div>
+          <div class="box content grow">
+            <p>I should be big, and on the right!</p>
+          </div>
+        </div>
+        <div class="full-width-box content">
+          <p>I take up the whole width.</p>
+        </div>
       </div>
     </body>
 </html>

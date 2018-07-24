@@ -129,7 +129,7 @@ right?
 We've definitely got some work to do. Here's what we want our site to look
 like:
 
-![image](https://git.generalassemb.ly/storage/user/6926/files/1ab5a122-6036-11e8-9e76-e77cbc3baf83)
+![image](https://media.git.generalassemb.ly/user/6926/files/a98ad344-8f44-11e8-966f-b16f102be67a)
 
 To get there, we'll need to apply some of the flex properties we just saw in the
 demo. Once we've achieved the desired layout, lets commit our changes.

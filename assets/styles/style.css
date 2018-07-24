@@ -1,8 +1,12 @@
-div {
+.content {
   height: 100px;
   border: 1px solid #000;
   margin: 10px;
   text-align: center;
+}
+
+.wrapper {
+  width: 900px;
 }
 
 nav {
@@ -18,9 +22,5 @@ nav {
 }
 
 .box {
-  width: 300px;
-}
-
-.full-width-box {
-  width: 944px;
+  width: 280px;
 }
