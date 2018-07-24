@@ -109,12 +109,16 @@ positioned along both axes.
 
 ### Demo: Flex Properties
 
-Let's take a look at [this Codepen](https://codepen.io/cpearce31/pen/djWBpJ) to
-get a sense of the different layouts we can achieve with various flex
-properties. We'll discuss what each property does and how it achieves the layout
-that you see here.
+Let's take a look at some actual code to get a sense of the different layouts we
+can achieve with various flex properties. We'll discuss what each property does
+and how it achieves the layout that you see here.
 
-### Code Along: Flexbox Demonstration
+In the tree view in Atom, find `demo.html`, right click, and select "Open in
+Browser". Then, resize your browser so that it takes up about half the screen,
+and resize Atom to take up the other half. In Atom, open up two panels, one with
+`demo.html` and another with `assets/styles/flex-demo.css`.
+
+### Code Along: Basic Layout
 
 Working on our `training` branch, let's use the example HTML code to
 demonstrate Flexbox.
