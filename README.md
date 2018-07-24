@@ -15,7 +15,7 @@ By the end of this talk, developers should be able to:
 -   Establish spacing inside and outside of elements using margin and padding.
 -   Explain the difference between different types of distance measurement in a web
 page, including 'px', '%', and 'em'.
--   Use 'float' and 'clear' to stack elements alongside each other.
+-   Use Flexbox to create rich layouts.
 -   Employ media queries to change CSS rules based on screen size.
 -   Explain the difference between 'static' and 'fixed' positioning.
 
@@ -114,12 +114,10 @@ get a sense of the different layouts we can achieve with various flex
 properties. We'll discuss what each property does and how it achieves the layout
 that you see here.
 
-### Code Along: Float Demonstration
+### Code Along: Flexbox Demonstration
 
 Working on our `training` branch, let's use the example HTML code to
 demonstrate Flexbox.
-
-![Clearing a Float](public/images/floated-block-elements-04.png)
 
 First, we'll spin up our server, and see how things look currently. Not great,
 right?
@@ -132,7 +130,7 @@ like:
 To get there, we'll need to apply some of the flex properties we just saw in the
 demo. Once we've achieved the desired layout, lets commit our changes.
 
-### Lab: Box Model, Float/Clear
+### Lab: Box Model, Flexbox
 
 Working with your squads on the `flex-site` branch, use
  [index.html](index.html) to create simple look-alikes that mimic the layout
@@ -187,7 +185,7 @@ Here are some properties that can be used to build media queries:
 
 ### Lab: Media Queries
 
-Revisit the basic site from the previous `float-site` branch exercise, and add
+Revisit the basic site from the previous `flex-site` branch exercise, and add
 a new effect that triggers when you shrink the screen below 800px wide.
 
 ## Static vs Fixed Positioning
