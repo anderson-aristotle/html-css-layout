@@ -12,7 +12,6 @@ nav {
 
 .nav-item {
   display: block;
-  float: left;
   padding: 10px;
   margin: 5px;
   border: 1px solid black;
@@ -23,6 +22,5 @@ nav {
 }
 
 .full-width-box {
-  /* Why such a specific number? Could we improve this somehow? */
   width: 944px;
 }
