@@ -15,7 +15,7 @@ By the end of this talk, developers should be able to:
 -   Establish spacing inside and outside of elements using margin and padding.
 -   Explain the difference between different types of distance measurement in a web
 page, including 'px', '%', and 'em'.
--   Use 'float' and 'clear' to stack elements alongside each other.
+-   Use Flexbox to create rich layouts.
 -   Employ media queries to change CSS rules based on screen size.
 -   Explain the difference between 'static' and 'fixed' positioning.
 
@@ -23,31 +23,21 @@ page, including 'px', '%', and 'em'.
 
 1.  Fork and clone this repository.
     [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-1.  Create three new branches, `training`, `float-site`, and `lookalike-site`.
+1.  Create three new branches, `training`, `flex-site`, and `lookalike-site`.
 1.  Install dependencies with `npm install`.
 
-
-## Historic CSS Layout
+## CSS Layout
 
 So far, we've mostly talked about using CSS for styling our page - adding
 colors, fonts, etc. In this talk, we'll be examining how CSS can be used to control a
 webpage's layout.
 
-Back in the 90s, layout was accomplished using tables (`<table>`), which had
-rows (`<tr>`) and row subdivisions (`<td>`). However, this was problematic for
-several reasons:
-
-1.  Layout was hard-coded into the page - it couldn't easily be adjusted.
-2.  Nesting tables within tables quickly became a nightmare - how could you tell
-apart the `<tr>` of one level from the `<td>` of another?
-3.  It wasn't very semantic - our markup would always say 'table', even though our
-content was typically not a table.
-
-Using CSS to control our layout addressed all of these issues. What's more, it
-effectively abstracted away the _layout_ of our page from the _content_ of our
-page.
-
+Back in the day, web layout was achieved with just HTML, let's look at an
+example of that, just for fun:
 [# 90's CSS Example](https://www.warnerbros.com/archive/spacejam/movie/jam.html)
+
+Today, layout is specified with CSS. It's easier, more modular, and it looks
+much better too!
 
 ## Box Model
 
@@ -81,36 +71,57 @@ For all dimensions except `font-size`, `em` will refer to the font size of the
 element; as a value for `font-size`, `em` refers to the font size of the
 *parent*.
 
-## Float and Clear
+## Flexbox
 
 Block elements, as a rule, always stack vertically - never side by side. Each
 block element effectively has a 'new-line' built into it, forcing the next piece
 of content down.
 
-![Floated Block Elements](public/images/floated-block-elements-01.png)
+This can be circumvented using a system called Flexbox. Officially called the
+"Flexible Box Model", Flexbox is a relatively recent addition to CSS that makes
+creating rich, responsive layouts much easier. Flexbox allows us to specify
+whether the children of a given element should be arranged horizontally or
+vertically, how they should be positioned along that axis, and how much space
+they should take up.
 
-This can be circumvented using the `float` property; floated elements act like
-words within a block of text, wrapping around the screen when it is too narrow
-to display the entire line.
+A Flexbox layout therefore consists of two layers: the container element, which
+we give the CSS properties `display: flex;` and `flex-direction: <direction>;`,
+and the child elements, which will be arranged in that direction.
 
-![Floated Block Elements](public/images/floated-block-elements-02.png)
+The most common choices for that `<direction>` will either be `row` or `column`.
 
-![Floated Block Elements](public/images/floated-block-elements-03.png)
+If we choose, `flex-direction: row;` on the container element, its children will
+be layed out like this:
 
-Like words, floated elements can be stacked from left-to-right (_left-floated_)
-or from right-to-left (_right-floated_)
+![Flex Row](public/images/flex-row.png)
 
-To make something fall beneath a set of floated elements, rather then wrapping
-around it, you can use the `clear` attribute; set clear to `left` to clear a
-`left` float, `right` to clear a `right` float, or `both` to clear either kind
-of float.
+If we choose `flex-direction: column;` we'll get this instead:
 
-### Code Along: Float Demonstration
+![Flex Column](public/images/flex-column.png)
+
+There's also a concept of a "cross axis", which is the axis perpendicular to
+the one chosen by `flex-direction`:
+
+![Flex Cross Axis](public/images/flex-row-cross-axis.png)
+
+We can use various other Flexbox properties to determine how elements are
+positioned along both axes.
+
+### Demo: Flex Properties
+
+Let's take a look at some actual code to get a sense of the different layouts we
+can achieve with various flex properties. We'll discuss what each property does
+and how it achieves the layout that you see here.
+
+In the tree view in Atom, find `demo.html`, right click, and select "Open in
+Browser". Then, resize your browser so that it takes up about half the screen,
+and resize Atom to take up the other half. In Atom, open up two panels, one with
+`demo.html` and another with `assets/styles/flex-demo.css`.
+
+### Code Along: Basic Layout
 
 Working on our `training` branch, let's use the example HTML code to
-demonstrate floating.
-
-![Clearing a Float](public/images/floated-block-elements-04.png)
+demonstrate Flexbox.
 
 First, we'll spin up our server, and see how things look currently. Not great,
 right?
@@ -118,25 +129,18 @@ right?
 We've definitely got some work to do. Here's what we want our site to look
 like:
 
-![image](https://git.generalassemb.ly/storage/user/6926/files/1ab5a122-6036-11e8-9e76-e77cbc3baf83)
+![image](https://media.git.generalassemb.ly/user/6926/files/a98ad344-8f44-11e8-966f-b16f102be67a)
 
-To get there, we'll need to use floats and clears, and we'll also need something
-known as the "clearfix hack".
+To get there, we'll need to apply some of the flex properties we just saw in the
+demo. Once we've achieved the desired layout, lets commit our changes.
 
-> Ordinarily, elements expand to hold their containers. However, floated
-> elements are excluded from this, so floating an element may lead to its
-> container's height shrinking down to nothing. To fix this, we use a "clearfix
-> hack" by applying `overflow: hidden;` to the container's style declarations.
+### Lab: Box Model, Flexbox
 
-Once we've achieved the desired layout, lets commit our changes.
-
-### Lab: Box Model, Float/Clear
-
-Working with your squads on the `float-site` branch, use
+Working with your squads on the `flex-site` branch, use
  [index.html](index.html) to create simple look-alikes that mimic the layout
 (but **not** the actual content) of one of the following sites, using what
  you've learned about so far about CSS positioning (including margin, padding,
-float and clear).
+ and Flexbox).
 
 -   [Boston Globe](http://bostonglobe.com)
 -   [Wikipedia](http://en.wikipedia.org/wiki/Main_Page)
@@ -185,7 +189,7 @@ Here are some properties that can be used to build media queries:
 
 ### Lab: Media Queries
 
-Revisit the basic site from the previous `float-site` branch exercise, and add
+Revisit the basic site from the previous `flex-site` branch exercise, and add
 a new effect that triggers when you shrink the screen below 800px wide.
 
 ## Static vs Fixed Positioning
@@ -194,7 +198,6 @@ All of the rules that you've learn so far are based on one paradigm of
 positioning, called 'static' positioning. Static positioning is the default positioning model for elements. They are displayed in the page where they rendered as part of normal HTML flow.
 
 ![Static](public/images/static.gif)
-
 
 Though there are others, the most significant type of positioning besides
 `static` positioning is `fixed` positioning. `fixed` positioning defines the
@@ -223,7 +226,7 @@ understanding is [this CSS-tricks blog post](https://css-tricks.com/absolute-pos
 ## Additional Resources:
 - [Interactive CSS Intro](https://rupl.github.io/unfold/)
 - [Interactive Box Model Demo](http://guyroutledge.github.io/box-model/)
-- [CSS Positioning Explained By Building An Ice Cream Sundae](https://medium.freecodecamp.org/css-positioning-explained-by-building-an-ice-cream-sundae-831cb884bfa9)
+- [CSS Floats](https://css-tricks.com/all-about-floats/)
 
 ## [License](LICENSE)
 
