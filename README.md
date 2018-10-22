@@ -4,33 +4,33 @@
 
 ## Prerequisites
 
--    Basic knowledge of HTML
--    Basic knowledge of CSS
+- Basic knowledge of HTML
+- Basic knowledge of CSS
 
 ## Objectives
 
 By the end of this talk, developers should be able to:
 
--   Explain the box model of element spacing.
--   Establish spacing inside and outside of elements using margin and padding.
--   Explain the difference between different types of distance measurement in a web
-page, including 'px', '%', and 'em'.
--   Use Flexbox to create rich layouts.
--   Employ media queries to change CSS rules based on screen size.
--   Explain the difference between 'static' and 'fixed' positioning.
+- Explain the box model of element spacing.
+- Establish spacing inside and outside of elements using margin and padding.
+- Explain the difference between different types of distance measurement in a
+  webpage, including 'px', '%', and 'em'.
+- Use Flexbox to create rich layouts.
+- Employ media queries to change CSS rules based on screen size.
+- Explain the difference between 'static' and 'fixed' positioning.
 
 ## Preparation
 
-1.  Fork and clone this repository.
+1. Fork and clone this repository.
     [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-1.  Create three new branches, `training`, `flex-site`, and `lookalike-site`.
-1.  Install dependencies with `npm install`.
+1. Create three new branches, `training`, `flex-site`, and `lookalike-site`.
+1. Install dependencies with `npm install`.
 
 ## CSS Layout
 
 So far, we've mostly talked about using CSS for styling our page - adding
-colors, fonts, etc. In this talk, we'll be examining how CSS can be used to control a
-webpage's layout.
+colors, fonts, etc. In this talk, we'll be examining how CSS can be used to
+control a webpage's layout.
 
 Back in the day, web layout was achieved with just HTML, let's look at an
 example of that, just for fun:
@@ -44,32 +44,38 @@ much better too!
 In addition to setting an element's `height` and `width`, elements have three
 other properties that explicitly control spacing:
 
-1.  'Border' sets a perimeter around an element. In addition to specifying a color
-and a particular type of border, you can also specify a thickness.
-2.  'Margin' specifies spacing between the outside of an element's border and any
-adjacent elements.
-3.  'Padding' specifies spacing between the inside of an element's border and the
-contents of that element (which includes `height` and `width`!)
+1. 'Border' sets a perimeter around an element. In addition to specifying a
+   color and a particular type of border, you can also specify a thickness.
+2. 'Margin' specifies spacing between the outside of an element's border and any
+   adjacent elements.
+3. 'Padding' specifies spacing between the inside of an element's border and the
+   contents of that element (which includes `height` and `width`!)
 
 Together, these attributes form _the box model_, a way of describing the space
 taken up by an element.
 
-_Note: The Box Model explains how CSS `width` is Calculated. By default, how wide an element is on the page is a combination of `width` + `padding` + `border` and the rendered `height` = `height` + `padding` + `border`. This can be problematic when trying to create a layout or position things logically on the page._
-_To calculate border, margin, and padding into the element's size, the element's CSS [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) property should be changed from the default `content-box` to `border-box.`_
+_Note: The Box Model explains how CSS `width` is Calculated. By default, how_
+_wide an element is on the page is a combination of `width` + `padding` +_
+_`border` and the rendered `height` = `height` + `padding` + `border`. This can_
+_be problematic when trying to create a layout or position things logically on_
+_the page._
+_To calculate border, margin, and padding into the element's size, the_
+_element's CSS [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)_
+_property should be changed from the default `content-box` to `border-box.`_
 
 ![Box Model](https://mdn.mozillademos.org/files/8685/boxmodel-3.png)
 
 Every one of these attributes, including `height` and `width`, can be specified
 in the following terms:
 
--   `px` : fixed number of pixels.
--   `%`  : size is relative to element that contains it ("parent"). As a value of
-`height`, `%` is relative to the parent's `height`, but for every other
-dimension, `%` is relative to the parent's `width` value.
--   `em` : ties dimensions to *font size* - one `em` is the width of the letter 'm'.
-For all dimensions except `font-size`, `em` will refer to the font size of the
-element; as a value for `font-size`, `em` refers to the font size of the
-*parent*.
+- `px` : fixed number of pixels.
+- `%`  : size is relative to element that contains it ("parent"). As a value of
+  `height`, `%` is relative to the parent's `height`, but for every other
+  dimension, `%` is relative to the parent's `width` value.
+- `em` : ties dimensions to *font size* - one `em` is the width of the letter
+  'm'. For all dimensions except `font-size`, `em` will refer to the font size
+  of the element; as a value for `font-size`, `em` refers to the font size of
+  the *parent*.
 
 ## Flexbox
 
@@ -142,15 +148,18 @@ Working with your squads on the `flex-site` branch, use
  you've learned about so far about CSS positioning (including margin, padding,
  and Flexbox).
 
--   [Boston Globe](http://bostonglobe.com)
--   [Wikipedia](http://en.wikipedia.org/wiki/Main_Page)
--   [Reddit](http://reddit.com)
+- [Boston Globe](http://bostonglobe.com)
+- [Wikipedia](http://en.wikipedia.org/wiki/Main_Page)
+- [Reddit](http://reddit.com)
 
 #### Hints
 
-1. Don't be afraid to 'cheat' by looking at the source code of the site you're mimicking.
+1. Don't be afraid to 'cheat' by looking at the source code of the site you're
+   mimicking.
 2. Keep your sketches simple - don't add details like text, colors, etc.
-3. When drawing boxes, try not to draw them flush against each other - adding a little bit of space helps to make it clear when boxes should be nested inside other boxes.
+3. When drawing boxes, try not to draw them flush against each other - adding a
+   little bit of space helps to make it clear when boxes should be nested inside
+   other boxes.
 4. Don't got more than 4 levels deep in your nesting.
 5. Bright colors for your divs help to make layout mistakes obvious.
 
@@ -183,9 +192,9 @@ therefore, are always placed at the bottom of your stylesheet.
 
 Here are some properties that can be used to build media queries:
 
--   min-width: CSS is visible at all screen widths **larger** than the given value.
--   max-width: CSS is visible at all screen widths **smaller** than the given value.
--   min/max-resolution: CSS is visible above/below a given resolution.
+- min-width: CSS is visible at all screen widths **larger** than the given value.
+- max-width: CSS is visible at all screen widths **smaller** than the given value.
+- min/max-resolution: CSS is visible above/below a given resolution.
 
 ### Lab: Media Queries
 
@@ -195,7 +204,9 @@ a new effect that triggers when you shrink the screen below 800px wide.
 ## Static vs Fixed Positioning
 
 All of the rules that you've learn so far are based on one paradigm of
-positioning, called 'static' positioning. Static positioning is the default positioning model for elements. They are displayed in the page where they rendered as part of normal HTML flow.
+positioning, called 'static' positioning. Static positioning is the default
+positioning model for elements. They are displayed in the page where they
+rendered as part of normal HTML flow.
 
 ![Static](public/images/static.gif)
 
@@ -213,9 +224,9 @@ Switch to the `lookalike-site` branch and work in your squads to create your own
  look-alike for the following websites. Try to use fixed positioning at least
 once.
 
--   [You Tube](https://youtube.com)
--   [Twitter](https://twitter.com/GA)
--   [Artisan Asylum](http://artisansasylum.com/)
+- [You Tube](https://youtube.com)
+- [Twitter](https://twitter.com/GA)
+- [Artisan Asylum](http://artisansasylum.com/)
 
 ## Further Practice: Relative and Absolute Positioning
 
@@ -223,13 +234,14 @@ once.
  and absolute positioning in CSS. How are they used? A helpful reference for
 understanding is [this CSS-tricks blog post](https://css-tricks.com/absolute-positioning-inside-relative-positioning/).
 
-## Additional Resources:
+## Additional Resources
+
 - [Interactive CSS Intro](https://rupl.github.io/unfold/)
 - [Interactive Box Model Demo](http://guyroutledge.github.io/box-model/)
 - [CSS Floats](https://css-tricks.com/all-about-floats/)
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
+   alternative licensing, please contact legal@ga.co.
