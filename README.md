@@ -236,6 +236,8 @@ understanding is [this CSS-tricks blog post](https://css-tricks.com/absolute-pos
 
 ## Additional Resources
 
+- [Getting Started With CSS Layout](https://www.smashingmagazine.com/2018/05/guide-css-layout/)
+- [flexplorer](http://bennettfeely.com/flexplorer/)
 - [Interactive CSS Intro](https://rupl.github.io/unfold/)
 - [Interactive Box Model Demo](http://guyroutledge.github.io/box-model/)
 - [CSS Floats](https://css-tricks.com/all-about-floats/)
