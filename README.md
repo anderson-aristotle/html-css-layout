@@ -11,12 +11,10 @@
 
 By the end of this talk, developers should be able to:
 
--   Explain the box model of element spacing.
--   Establish spacing inside and outside of elements using margin and padding.
--   Explain the difference between different types of distance measurement in a web
-page, including 'px', '%', and 'em'.
+-   Explain the box model.
+-   Contrast `px`, `%`, and `em` measurements.
 -   Use Flexbox to create rich layouts.
--   Employ media queries to change CSS rules based on screen size.
+-   Use media queries to change CSS rules based on screen size.
 -   Explain the difference between 'static' and 'fixed' positioning.
 
 ## Preparation
