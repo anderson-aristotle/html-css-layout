@@ -225,6 +225,8 @@ understanding is [this CSS-tricks blog post](https://css-tricks.com/absolute-pos
 - [Interactive CSS Intro](https://rupl.github.io/unfold/)
 - [Interactive Box Model Demo](http://guyroutledge.github.io/box-model/)
 - [CSS Floats](https://css-tricks.com/all-about-floats/)
+- [Visual Guide to Flexbox](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)
+- [Flexbox Demos](https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/)
 
 ## [License](LICENSE)
 
