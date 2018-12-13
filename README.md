@@ -11,13 +11,11 @@
 
 By the end of this talk, developers should be able to:
 
-- Explain the box model of element spacing.
-- Establish spacing inside and outside of elements using margin and padding.
-- Explain the difference between different types of distance measurement in a
-  webpage, including 'px', '%', and 'em'.
-- Use Flexbox to create rich layouts.
-- Employ media queries to change CSS rules based on screen size.
-- Explain the difference between 'static' and 'fixed' positioning.
+-   Explain the box model.
+-   Contrast `px`, `%`, and `em` measurements.
+-   Use Flexbox to create rich layouts.
+-   Use media queries to change CSS rules based on screen size.
+-   Explain the difference between 'static' and 'fixed' positioning.
 
 ## Preparation
 
@@ -129,16 +127,20 @@ and resize Atom to take up the other half. In Atom, open up two panels, one with
 Working on our `training` branch, let's use the example HTML code to
 demonstrate Flexbox.
 
-First, we'll spin up our server, and see how things look currently. Not great,
-right?
+First, we'll spin up our server, and see how things look currently. There's
+nothing there! We'll need to create this layout from scratch.
 
 We've definitely got some work to do. Here's what we want our site to look
 like:
 
-![image](https://media.git.generalassemb.ly/user/6926/files/a98ad344-8f44-11e8-966f-b16f102be67a)
+![image](https://media.git.generalassemb.ly/user/6926/files/d923a280-febf-11e8-9a66-a2b6cd3397b4)
 
-To get there, we'll need to apply some of the flex properties we just saw in the
-demo. Once we've achieved the desired layout, lets commit our changes.
+To get there, we'll need to use some of the flex properties we just saw in the
+demo, as well as our knowledge of the box model. Once we've achieved the desired
+layout, lets commit our changes.
+
+Add your markup between the `<body>` tags in `index.html`, and your styling in
+`assets/styles/styles.css`.
 
 ### Lab: Box Model, Flexbox
 
@@ -241,6 +243,8 @@ understanding is [this CSS-tricks blog post](https://css-tricks.com/absolute-pos
 - [Interactive CSS Intro](https://rupl.github.io/unfold/)
 - [Interactive Box Model Demo](http://guyroutledge.github.io/box-model/)
 - [CSS Floats](https://css-tricks.com/all-about-floats/)
+- [Visual Guide to Flexbox](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)
+- [Flexbox Demos](https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/)
 
 ## [License](LICENSE)
 
