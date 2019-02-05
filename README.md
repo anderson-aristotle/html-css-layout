@@ -11,11 +11,11 @@
 
 By the end of this talk, developers should be able to:
 
--   Explain the box model.
--   Contrast `px`, `%`, and `em` measurements.
--   Use Flexbox to create rich layouts.
--   Use media queries to change CSS rules based on screen size.
--   Explain the difference between 'static' and 'fixed' positioning.
+-  Explain the box model.
+-  Contrast `px`, `%`, and `em` measurements.
+-  Use Flexbox to create rich layouts.
+-  Use media queries to change CSS rules based on screen size.
+-  Explain the difference between 'static' and 'fixed' positioning.
 
 ## Preparation
 
