@@ -127,7 +127,7 @@ and resize Atom to take up the other half. In Atom, open up two panels, one with
 Working on our `training` branch, let's use the example HTML code to
 demonstrate Flexbox.
 
-First, we'll spin up our server, and see how things look currently. There's
+First, we'll spin up our server using `grunt serve`, and see how things look currently. There's
 nothing there! We'll need to create this layout from scratch.
 
 We've definitely got some work to do. Here's what we want our site to look
